@@ -1,8 +1,6 @@
-CLI Table [![NPM Version](http://badge.fury.io/js/cli-table.svg)](http://badge.fury.io/js/cli-table) [![Build Status](https://secure.travis-ci.org/Automattic/cli-table.svg)](http://travis-ci.org/Automattic/cli-table)
-=========
 
 This utility allows you to render unicode-aided tables on the command line from
-your node.js scripts.
+your node.js scripts. Forked from cli-table, support CJK characters. (支持中文了)
 
 ![Screenshot](http://i.imgur.com/sYq4T.png)
 
@@ -20,14 +18,14 @@ your node.js scripts.
 ## Installation
 
 ```bash    
-npm install cli-table
+npm install cli-table-ext
 ```
 
 ## How to use
 
 ### Horizontal Tables
 ```javascript
-import Table from 'cli-table';
+import Table from 'cli-table-ext';
 
 // instantiate
 const table = new Table({
@@ -46,7 +44,7 @@ console.log(table.toString());
 
 ### Vertical Tables
 ```javascript
-const Table = require('cli-table');
+const Table = require('cli-table-ext');
 const table = new Table();
 
 table.push(
@@ -63,7 +61,7 @@ Cross tables are very similar to vertical tables, with two key differences:
 2. The individual rows take the general form of { "Header": ["Row", "Values"] }
 
 ```javascript
-import Table from 'cli-table';
+import Table from 'cli-table-ext';
 const table = new Table({ head: ["", "Top Header 1", "Top Header 2"] });
 
 table.push(
